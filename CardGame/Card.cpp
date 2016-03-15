@@ -26,7 +26,7 @@ int Card::number() // return card number
 	return num;
 }
 
-void Card::print() // displays card as “colour number”
+void Card::print() // display card as “colour number”
 {
 	cout << colour << " " << number;
 }
