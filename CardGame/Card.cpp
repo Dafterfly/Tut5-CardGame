@@ -1,5 +1,6 @@
 #include "Card.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -23,4 +24,9 @@ string Card::colour() // return card colur
 int Card::number() // return card number 
 {
 	return num;
+}
+
+void Card::print() // displays card as “colour number”
+{
+	cout << colour << " " << number;
 }

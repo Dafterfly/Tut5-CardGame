@@ -14,5 +14,6 @@ public:
 	~Card();
 	string colour(); 
 	int number();
+	void print();
 };
 
