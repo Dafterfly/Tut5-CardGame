@@ -6,11 +6,13 @@ using namespace std;
 class Card
 {
 private:
-	int number;
-	string colour = ""; 
+	int num;
+	string col = ""; 
 
 public:
 	Card(int number, string colour);
 	~Card();
+	string colour(); 
+	int number();
 };
 

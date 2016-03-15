@@ -6,11 +6,17 @@ using namespace std;
 
 Card::Card(int numberIn, string colourIn) // overload default constructor
 {
-	number = numberIn;
-	colour = colourIn;
+	num = numberIn;
+	col = colourIn;
 }
 
 
 Card::~Card()
 {
 }
+
+string Card::colour()
+{
+	return col;
+}
+
