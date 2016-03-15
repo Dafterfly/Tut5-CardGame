@@ -15,12 +15,12 @@ Card::~Card()
 {
 }
 
-string Card::colour()
+string Card::colour() // return card colur
 {
 	return col;
 }
 
-int Card::number()
+int Card::number() // return card number 
 {
 	return num;
 }
