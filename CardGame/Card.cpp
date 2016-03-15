@@ -20,3 +20,7 @@ string Card::colour()
 	return col;
 }
 
+int Card::number()
+{
+	return num;
+}
