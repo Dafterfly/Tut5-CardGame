@@ -47,24 +47,25 @@ Card DeckOfCards::peek(){ // prints card at top of deck (like draw but des not d
 }
 
 void DeckOfCards::shuffle(){ //picks two random cards and switches their order repeats this 50 times 
-	srand(time(NULL));  //seed the randomizer  
-	Card temp;
-	int r1 = 0; //first random card index
-	int r2 = 0; //second random card index
-	for (int i = 0; i < 50; i++)
+	if (noOfCards >= 2)
 	{
-		r1 = rand() % 19;
-		r2 = rand() % 19;
-		if (r1 != r2) // swap cards if index is not the same
+		srand(time(NULL));  //seed the randomizer  
+		Card temp;
+		int r1 = 0; //first random card index
+		int r2 = 0; //second random card index
+		for (int i = 0; i < 50; i++)
 		{
-			temp = ptrCard[r1];
-			ptrCard[r1] = ptrCard[r2];
-			ptrCard[r2] = temp;
-		}
-		else
-		{
-			cout << "Error During Shuffling. Trying again" << endl;
+			r1 = rand() % noOfCards;
+			r2 = rand() % noOfCards;
+			if (r1 != r2) // swap cards if index is not the same
+			{
+				temp = ptrCard[r1];
+				ptrCard[r1] = ptrCard[r2];
+				ptrCard[r2] = temp;
+			}
 		}
 	}
+	else
+		cout <<"There are not enough cards to shuffle!"<< endl;
 }
 
