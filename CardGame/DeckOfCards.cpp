@@ -29,3 +29,8 @@ DeckOfCards::~DeckOfCards()
 	delete[] ptrCard;
 }
 
+DeckOfCards DeckOfCards::reset(){
+		noOfCards = 20; // reset number of cards (in case draw() was used)
+	return DeckOfCards(); 
+}
+
