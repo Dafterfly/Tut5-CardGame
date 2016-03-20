@@ -63,5 +63,17 @@ int main() // main testing programme
 	cout << "Number of cards Remaining: " << myDeck->numberOfCards() << endl;
 	cout << endl;
 
+	//test if shuffle still works if only one card in deck:
+	// draw until one card left
+	cout <<"Test if shuffle still works if only one card in deck" << endl;
+	while (myDeck->numberOfCards() > 1)
+	{
+		cout << "Draw: ";
+		myDeck->draw();
+		cout << endl;
+	}
+	cout << "Number of cards Remaining: " << myDeck->numberOfCards() << endl;
+	myDeck->shuffle();
+
 	return 0;
 }
