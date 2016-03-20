@@ -40,3 +40,9 @@ Card DeckOfCards::draw(){ // draws a card
 	return ptrCard[noOfCards];
 	delete &ptrCard[noOfCards]; // removes card from deck
 }
+
+Card DeckOfCards::peek(){ // prints card at top of deck (like draw but des not delete the card)
+	ptrCard[noOfCards - 1].print();
+	return ptrCard[noOfCards - 1];
+}
+
