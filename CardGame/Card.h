@@ -10,6 +10,7 @@ private:
 	string col = ""; 
 
 public:
+	Card::Card();
 	Card(int number, string colour);
 	~Card();
 	string colour(); 
