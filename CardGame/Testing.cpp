@@ -15,27 +15,29 @@ int main() // main testing programme
 	
 	// Normal
 	cout << "Normal conditions: ";
-	Card c1(10, "Red");
-	cout <<"Colour: " <<c1.colour() << endl;
-	cout << "Number: " <<c1.number() << endl;
+	Card card1(10, "Red");
+	cout << "Colour: " << card1.colour() << endl;
+	cout << "Number: " << card1.number() << endl;
 	cout << "Combined: ";
-	c1.print();
+	card1.print();
 	cout<< endl;
 
 	// Invalid number case
 	cout << "Invalid number case: ";
-	Card c2(22, "Red");
+	Card card2(22, "Red");
 	cout << endl;
 
 	// Invalid colour case
 	cout << "Invalid colour case: ";
-	Card c3(10, "Purple");
+	Card card3(10, "Purple");
 	cout << endl;
 
 	// Invalid number and colour case
 	cout << "Invalid number and colour case: ";
-	Card c4(111, "Purple");
+	Card card4(111, "Purple");
 	cout << endl;
+
+
 
 	return 0;
 }
