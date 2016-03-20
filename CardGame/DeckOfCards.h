@@ -4,8 +4,8 @@
 
 class DeckOfCards
 {
-private: int cardsRemaining;
-		 Card *cardPtr = NULL;  //card stack / array pointer
+private: int noOfCards;
+		 Card *ptrCard = NULL;  //card stack / array pointer
 public:
 	DeckOfCards();
 	~DeckOfCards();
