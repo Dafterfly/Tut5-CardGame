@@ -49,5 +49,5 @@ return num;
 
 void Card::print() // display card as “colour number”
 {
-cout << colour << " " << number;
+cout << col << " " << num;
 }
