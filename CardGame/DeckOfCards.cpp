@@ -1,7 +1,7 @@
 #include "DeckOfCards.h"
 #include "Card.h"
 #include <iostream>
-
+#include <ctime>
 
 using namespace std;
 
@@ -44,5 +44,27 @@ Card DeckOfCards::draw(){ // draws a card
 Card DeckOfCards::peek(){ // prints card at top of deck (like draw but des not delete the card)
 	ptrCard[noOfCards - 1].print();
 	return ptrCard[noOfCards - 1];
+}
+
+void DeckOfCards::shuffle(){ //picks two random cards and switches their order repeats this 50 times 
+	srand(time(NULL));  //seed the randomizer  
+	Card temp;
+	int r1 = 0; //first random card index
+	int r2 = 0; //second random card index
+	for (int i = 0; i < 50; i++)
+	{
+		r1 = rand() % 19;
+		r2 = rand() % 19;
+		if (r1 != r2) // swap cards if index is not the same
+		{
+			temp = ptrCard[r1];
+			ptrCard[r1] = ptrCard[r2];
+			ptrCard[r2] = temp;
+		}
+		else
+		{
+			cout << "Error During Shuffling. Trying again" << endl;
+		}
+	}
 }
 
