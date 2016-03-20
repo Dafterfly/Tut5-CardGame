@@ -29,8 +29,14 @@ DeckOfCards::~DeckOfCards()
 	delete[] ptrCard;
 }
 
-DeckOfCards DeckOfCards::reset(){
+DeckOfCards DeckOfCards::reset(){ // makes a new deck
 		noOfCards = 20; // reset number of cards (in case draw() was used)
 	return DeckOfCards(); 
 }
 
+Card DeckOfCards::draw(){ // draws a card
+	ptrCard[noOfCards - 1].print(); // displays card
+	noOfCards--;  //Decrement card count 
+	return ptrCard[noOfCards];
+	delete &ptrCard[noOfCards]; // removes card from deck
+}
