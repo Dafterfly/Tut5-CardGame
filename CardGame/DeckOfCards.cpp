@@ -73,6 +73,11 @@ void DeckOfCards::shuffle() //picks two random cards and switches their order re
 	cout <<"There are not enough cards to shuffle!"<< endl;
 }
 
+int DeckOfCards::numberOfCards(){
+ 	return noOfCards;
+}
+
+
 void DeckOfCards::print()// prints the deck of cards
 {
 	int i;
