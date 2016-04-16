@@ -11,7 +11,8 @@ private: int noOfCards;
 public:
 	DeckOfCards();
 	~DeckOfCards();
-	DeckOfCards reset();  
+	void reset();  
+	void createDeck();
 	void shuffle();
 	void draw();   
 	void peek();  

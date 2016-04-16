@@ -14,8 +14,6 @@ DeckOfCards::DeckOfCards() // initialise a deck of cards
 
 void DeckOfCards::createDeck()
 {
-	noOfCards = 20; //Start with a full deck again 
-	//ptrCard = new Card[noOfCards];
 	Card tempCard;
 	// first half of deck is red 1-10
 	for (int i = 0; i < 10; i++)
@@ -55,7 +53,7 @@ void DeckOfCards::peek() // prints card at top of deck (like draw but des not de
 
 void DeckOfCards::shuffle() //picks two random cards and switches their order repeats this 50 times 
 {
-	if (noOfCards >= 2)
+	if (myDeck.size() >= 2)
 	{
 		random_shuffle(myDeck.begin(), myDeck.end());
 	}
