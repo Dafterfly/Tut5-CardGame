@@ -9,6 +9,11 @@ using namespace std;
 
 DeckOfCards::DeckOfCards() // initialise a deck of cards
 {
+	createDeck();
+}
+
+void DeckOfCards::createDeck()
+{
 	noOfCards = 20; //Start with a full deck again 
 	//ptrCard = new Card[noOfCards];
 	Card tempCard;
@@ -16,13 +21,13 @@ DeckOfCards::DeckOfCards() // initialise a deck of cards
 	for (int i = 0; i < 10; i++)
 	{
 		Card tempCard(i + 1, "Red");
-			 myDeck.push_back(tempCard);
+		myDeck.push_back(tempCard);
 	}
-	
+
 	//second half of deck is black 1-10
 	for (int i = 10; i < 20; i++)
 	{
-		myDeck.push_back(Card(i + 1-10, "Red"));
+		myDeck.push_back(Card(i + 1 - 10, "Black"));
 	}
 }
 
@@ -32,10 +37,9 @@ DeckOfCards::~DeckOfCards()
 	delete[] ptrCard;
 }
 
-DeckOfCards DeckOfCards::reset()// makes a new deck
+void DeckOfCards::reset()// makes a new deck
 { 
-	noOfCards = 20; // reset number of cards (in case draw() was used)
-	return DeckOfCards(); 
+	createDeck();
 }
 
 void DeckOfCards::draw() // draws a card
@@ -60,18 +64,19 @@ void DeckOfCards::shuffle() //picks two random cards and switches their order re
 }
 
 int DeckOfCards::numberOfCards(){
- 	return noOfCards;
+ 	return myDeck.size();
 }
 
 
 void DeckOfCards::print()// prints the deck of cards
 {
-	int i;
-	cout <<"Deck:" << endl;
-	for (i = 0; i < noOfCards; i++)
-	{
-		ptrCard[i].print();
-		cout << endl;
+	cout << "Deck:" << endl;
+	vector<Card>::iterator card = myDeck.begin();
+	while (card != myDeck.end()) {
+		card->print();
+		cout<<endl;
+		card++;
 	}
+	cout << endl;
 }
 
