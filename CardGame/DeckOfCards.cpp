@@ -15,14 +15,14 @@ DeckOfCards::DeckOfCards() // initialise a deck of cards
 	// first half of deck is red 1-10
 	for (int i = 0; i < 10; i++)
 	{
-		 tempCard(i + 1, "Red")
+		Card tempCard(i + 1, "Red");
 			 myDeck.push_back(tempCard);
 	}
 	
 	//second half of deck is black 1-10
 	for (int i = 10; i < 20; i++)
 	{
-		myDeck.push_back(Card(i + 1, "Red"));
+		myDeck.push_back(Card(i + 1-10, "Red"));
 	}
 }
 
